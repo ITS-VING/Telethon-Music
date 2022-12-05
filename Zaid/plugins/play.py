@@ -552,7 +552,6 @@ async def kickedvc(_, chat_id: int):
         active.remove(chat_id)
 
 @Zaid.on(events.NewMessage(pattern="^/broadcast"))
-@sudo_users_only
 async def broadcast_message_nopin(c: Client, message: Message):
     if not message.reply_to_message:
         pass
